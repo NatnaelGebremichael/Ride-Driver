@@ -2,11 +2,15 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Entypo from "react-native-vector-icons/Entypo";
 
-const BottomTab = () => {
+const BottomTab = (isOnline) => {
   return (
     <View style={styles.bottomContainer}>
       <Entypo name={"menu"} size={24} color={"#4a4a4a"} />
-      <Text style={styles.bottomText}> You are Offline</Text>
+      {isOnline.isOnline ? (
+        <Text style={styles.bottomText}> You are Online</Text>
+      ) : (
+        <Text style={styles.bottomText}> You are Offline</Text>
+      )}
       <Entypo name={"menu"} size={24} color={"#4a4a4a"} />
     </View>
   );
