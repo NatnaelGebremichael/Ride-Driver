@@ -12,6 +12,7 @@ import BottomTab from "../components/BottomTab";
 import tw from "twrnc";
 import EarningDisplay from "../components/EarningDisplay";
 import Entypo from "react-native-vector-icons/Entypo";
+import OrderPopUp from "../components/OrderPopUp";
 
 const HomeScreen = () => {
   const [isOnline, setIsOnline] = useState(false);
@@ -114,6 +115,7 @@ const HomeScreen = () => {
       <Buttons />
       <Map />
       <BottomTab isOnline={isOnline} />
+      <OrderPopUp />
     </View>
   );
 };
